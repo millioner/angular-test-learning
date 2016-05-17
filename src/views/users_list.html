@@ -1,0 +1,22 @@
+<h2>Clients list</h2>
+
+<table class="table">
+  <thead>
+  	<tr>
+  		<th>Username</th>
+  		<th>Email</th>
+  		<th>Full name</th>
+  		<th>URL</th>
+  		<th>Avatar</th>
+  	</tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="user in users.data.list">
+      <td ng-bind="user.username"></td>
+      <td><email>{{user.email}}</email></td>
+      <td ng-bind="user.full_name | capitalize"></td>
+      <td ng-bind="user.url"></td>
+      <td ng-bind="user.avatar"></td>
+    </tr>
+  </tbody>
+</table>

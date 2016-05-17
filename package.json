@@ -1,0 +1,28 @@
+{
+  "name": "js-test-libs-cmp",
+  "version": "0.0.1",
+  "description": "A small angular-driven project for comparing different unit testing tools",
+  "main": "karma.conf.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "angular": "^1.5.5",
+    "bower": "^1.7.9",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.22",
+    "karma-chrome-launcher": "^1.0.1",
+    "karma-jasmine": "^1.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "study",
+    "unit-testing",
+    "angular"
+  ],
+  "author": "Oleg Bondarenko <millioner.bbb@gmail.com>",
+  "license": "ISC"
+}

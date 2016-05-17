@@ -1,0 +1,26 @@
+{
+  "name": "js-test-libs-cmp",
+  "description": "A small angular-driven project for comparing different unit testing tools",
+  "main": "",
+  "authors": [
+    "Oleg Bondarenko <millioner.bbb@gmail.com>"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "study",
+    "unit-testing",
+    "angular"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.5",
+    "angular-route": "^1.5.5"
+  }
+}

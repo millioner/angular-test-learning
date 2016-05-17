@@ -1,0 +1,10 @@
+###Node###
+
+
+# Coverage directory used by tools like istanbul
+coverage
+
+
+npm-faq.html#should-i-check-my-node_modules-folder-into-git-
+node_modules
+bower_components
