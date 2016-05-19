@@ -4,7 +4,7 @@ describe('Users service', function () {
   var $http, appUsers;
 
   beforeEach(function(){
-    fixture.setBase('../../data');
+    fixture.setBase('data');
     this.result = fixture.load('users.json');
   });
 

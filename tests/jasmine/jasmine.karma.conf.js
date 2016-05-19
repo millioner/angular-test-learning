@@ -4,7 +4,7 @@ module.exports = function(config) {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
-    basePath: './jasmine',
+    basePath: './../..',
 
 
     // frameworks to use
@@ -33,26 +33,26 @@ module.exports = function(config) {
 
     files: [
       // lib stuff
-      '../../node_modules/phantomjs-polyfill/bind-polyfill.js',
-      '../../bower_components/jquery/dist/jquery.min.js',
-      '../../bower_components/bootstrap/dist/js/bootstrap.min.js',
-      '../../bower_components/angular/angular.min.js',
-      '../../bower_components/angular-route/angular-route.min.js',
-      '../../node_modules/angular-mocks/angular-mocks.js',
+      'node_modules/phantomjs-polyfill/bind-polyfill.js',
+      'bower_components/jquery/dist/jquery.min.js',
+      'bower_components/bootstrap/dist/js/bootstrap.min.js',
+      'bower_components/angular/angular.min.js',
+      'bower_components/angular-route/angular-route.min.js',
+      'node_modules/angular-mocks/angular-mocks.js',
       // src
-      '../../src/js/app.js',
-      '../../src/js/services/*.js',
-      '../../src/js/directives.js',
-      '../../src/js/filters.js',
-      '../../src/js/controllers/*.js',
+      'src/js/app.js',
+      'src/js/services/*.js',
+      'src/js/directives.js',
+      'src/js/filters.js',
+      'src/js/controllers/*.js',
       // templates
-      '../../src/views/*.html',
+      'src/views/*.html',
       // actual tests
-      './*.js',
-      './*/*.js',
+      'tests/jasmine/*.js',
+      'tests/jasmine/*/*.js',
       // JSON fixtures
       {
-        pattern: '../../data/*.json',
+        pattern: 'data/*.json',
       }
     ],
 
@@ -64,9 +64,9 @@ module.exports = function(config) {
 
     preprocessors: {
       // Preprocessor for converting HTML files into JS strings (karma-ng-html2js-preprocessor)
-      '../../src/views/*.html': ['ng-html2js'],
+      'src/views/*.html': ['ng-html2js'],
       // Preprocessor for converting .json files into .js files (karma-json-fixtures-preprocessor)
-      '../../data/*.json': ['json_fixtures']
+      'data/*.json': ['json_fixtures']
 
       // see available settings for both preprocessors below
     },
@@ -98,7 +98,7 @@ module.exports = function(config) {
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
     browsers: ['PhantomJS'],
-    // browsers: ['Chrome'],
+    // browsers: ['Chrome'],  // use for debugging
 
 
     // Continuous Integration mode
@@ -110,20 +110,20 @@ module.exports = function(config) {
     concurrency: Infinity,
 
     // ****** JSON fixtures preprocessor - available settings ******
-    // jsonFixturesPreprocessor: {
+    jsonFixturesPreprocessor: {
       // strip this from the file path \ fixture name 
       // stripPrefix: 'test/fixtures',
       // strip this to the file path \ fixture name 
       // prependPrefix: 'mock/',
       // change the global fixtures variable name 
-      // variableName: '__mocks__',
+      variableName: '__json__',  // don't work without this line, karma expects json fixture in that variable
       // camelize fixture filenames (e.g 'fixtures/aa-bb_cc.json' becames __fixtures__['fixtures/aaBbCc']) 
       // camelizeFilenames: true,
       // transform the filename 
       // transformPath: function(path) {
       //   return path + '.js';
       // }
-    // }
+    }
     // Usage:
     // var fixture = window.__fixtures__['fixtures/test'];
     // fixture["a"] // => 'test' 
